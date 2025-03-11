@@ -3,7 +3,6 @@ import Name from './components/Name'
 import FilterForm from './components/FilterForm'
 import PersonForm from './components/PersonForm'
 import personService from './services/persons'
-import './index.css'
 
 const App = () => {
   const [persons, setPersons] = useState([])
