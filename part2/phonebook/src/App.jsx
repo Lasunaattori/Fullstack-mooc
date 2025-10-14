@@ -49,7 +49,12 @@ const App = () => {
           {message}
         </div>
       )
-    } else { 
+    } else if (message.includes('failed')) { 
+      return(
+        <div style={removeNotificationStyle}>
+          {message}
+        </div>
+    )} else { 
       return(
         <div style={addNotificationStyle}>
           {message}
@@ -103,11 +108,13 @@ const App = () => {
     personService
       .create(personObject)
       .then(response => {
-        console.log('promise fullfilled')
-      }).then(response => {
         personService
           .getAll()
           .then(response => setPersons(response))
+      })
+      .catch(error => {
+        console.log(error.response.data.error)
+        setAddMessage(error.response.data.error)
       })
 
     setAddMessage(
