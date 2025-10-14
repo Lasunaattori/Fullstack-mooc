@@ -13,9 +13,21 @@ mongoose.connect(url)
         console.log('error connecting to MongoDB', error.message)
     })
 
+function number_validator (val) {
+  const splitattu_teksti = val.split("-")
+  return (splitattu_teksti[0].length === 2 || splitattu_teksti[0].length === 3) && (!isNaN(splitattu_teksti[0])) && (!isNaN(splitattu_teksti[1])) 
+}
+
 const phoneNumberSchema = new mongoose.Schema({
-  name: String,
-  number: String,
+  name: {
+    type: String,
+    minLength: 3
+  },
+  number: {
+    type: String,
+    minLength:8,
+    validate: number_validator
+  }
 })
 
 phoneNumberSchema.set('toJSON', {
