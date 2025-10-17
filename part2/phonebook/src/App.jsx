@@ -144,7 +144,6 @@ const App = () => {
   const personsToShow = persons.filter(person => person.name.toLowerCase().includes(newFilter.toLowerCase()))
 
   const toggleDelete = (id, name) => {
-    console.log(id, name)
     if (window.confirm(`Are you sure you want to delete ${name}?`)){
     personService
       .deletePerson(id)
