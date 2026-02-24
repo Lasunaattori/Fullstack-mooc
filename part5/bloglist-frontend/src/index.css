@@ -1,0 +1,41 @@
+.success {
+  color: black;
+  background: lightgreen;
+  padding-top: 5px;
+  border-style: solid;
+  border-radius: 7px;
+  padding: 10px;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.error {
+  color: red;
+  background: lightgrey;
+  padding-top: 5px;
+  font-size: 22px;
+  border-style: solid;
+  border-radius: 7px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.blog{
+  color: black;
+  background: lightgrey;
+  padding-top: 2px;
+  font-size: 15px;
+  border-style: solid;
+  border-radius: 2px;
+  padding: 1px;
+  margin-bottom: 4px;
+}
+
+.removebutton {
+  background-color: orangered;
+  border: solid;
+  color: white;
+  padding: 5px 5px;
+  text-align: center;
+  font-size: 12px;
+}
